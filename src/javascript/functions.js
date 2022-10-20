@@ -4,6 +4,10 @@
                   | |_ | | | | '_ \ / __| __| |/ _ \| '_ \/ __|
                   |  _|| |_| | | | | (__| |_| | (_) | | | \__ \
                   |_|   \__,_|_| |_|\___|\__|_|\___/|_| |_|___/
+--------------------------------------------------------------------------------
+
+                         function <functionName>() {}
+
 ------------------------------------------------------------------------------*/
 
 // OUPUT ONLY FUNCTION 
@@ -19,12 +23,12 @@ TASK FUNCTION
     - a function that perfoms a task
 ------------------------------------------------------------------------------*/
 
-// - Parameter is the value given when declaring the function (message).
+// - parameter is the value given when declaring the function (message).
 function lesson(language, chapter) { 
     console.log('This is for' + language + chapter);
 }
 
-// - Argument is the value assigned to the parameter ('Hello!').
+// - argument is the value assigned to the parameter ('Hello!').
 new_greeting('JavaScript', 'functions');
 
 
@@ -44,10 +48,11 @@ console.log(number);
 
 /*------------------------------------------------------------------------------
 FACTORY FUNCTION
-    - a function that returns objects
+    - style convention: camelCase
+    - a function that returns an object
 ------------------------------------------------------------------------------*/
 
-function createShape(radius) {
+function createShape(radius) {  // camelCase
     return {
 
         // SAME AS: 'radius: radius'
@@ -64,7 +69,24 @@ function createShape(radius) {
 
 
 /*------------------------------------------------------------------------------
-FUNCTION NOTES: 
+CONSTRUCTOR FUNCTION
+    - style convention: PascalCase
+    - a function that requires the 'new' operator
+    - uses 'this' keyword instead of returning an object via factory function
+------------------------------------------------------------------------------*/
+
+function Circle(radius) {
+    this.radius = radius;       // 'this' references the parent object
+    this.draw = function() {
+        console.log('draw');
+    }
+}
+
+const circle = new Circle(1);
+
+
+/*------------------------------------------------------------------------------
+KEY FUNCTION NOTES: 
 --------------------------------------------------------------------------------
 - If a value is not given for an argument, it will become 'undefined'.
 
