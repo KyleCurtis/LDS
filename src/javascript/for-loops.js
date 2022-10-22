@@ -18,6 +18,7 @@ for (let i = 0; i <= 5; i++) {
 
 /*------------------------------------------------------------------------------
 FOR-IN LOOP
+    - provides access to the object keys only.
 ------------------------------------------------------------------------------*/
 
 let cities = ['Seattle', 'Atlanta', 'Miami', 'Chicago'];
@@ -29,6 +30,8 @@ for (let city in cities) {
 
 /*------------------------------------------------------------------------------
 FOR-OF LOOP
+    - provides access to the value(s) of the object key(s).
+    - Can only be used with iterables (arrays, maps, etc.)
 ------------------------------------------------------------------------------*/
 
 let colors = ['Blue', 'Purple', 'Pink', 'Green'];

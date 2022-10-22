@@ -7,15 +7,25 @@
                                          |___/|_|              
 ------------------------------------------------------------------------------*/
 
-let language = "JavaScript";    // STRING TYPE
-let intNumber = 32;             // NUMBER TYPE (Number Literal)
-let isJavascript = true;        // BOOLEAN TYPE ('true' or 'false')
+/* ------------------------------------------------------------------------------
+LITERALS
+-------------------------------------------------------------------------------*/
+let stringLiteral = "JavaScript";   // string literal
+let numberLiteral = 32;             // number literal
+let bigInteger = 100n;              // big integer
+let booleanLiteral = true;          // boolean literal
 
 
 // UNDEFINED & NULL TYPE
 let highScore = undefined;      // UNDEFINED TYPE
 let userScore = null;           // NULL TYPE
 
+/* ------------------------------------------------------------------------------
+CONSTRUCTORS
+-------------------------------------------------------------------------------*/
+let StringConstructor = new String('JavaScript');   // string constructor
+let NumberConstructor = new Number(32);             // number constructor
+let BooleanConstructor = new Boolean(true);         // boolean constructor
 
 /* ------------------------------------------------------------------------------
 DYNAMIC TYPING & TYPEOF

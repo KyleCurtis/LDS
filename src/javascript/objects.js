@@ -7,7 +7,7 @@
                                   |__/
 --------------------------------------------------------------------------------
 
-<declaration> <objectName> = {key:value,}
+<declaration> <objectName> = {key:value}
 
 |-----------| = Object Property (seperated by commas)
  key: value,
@@ -41,7 +41,6 @@ ADDING AND REMOVING OBJECT PROPERTIES
 ------------------------------------------------------------------------------*/
 
 player.healthLevel = 100;   // adds player property via dot-notation
-
 delete player.manaLevel;    // use the 'delete' keyword to remove a property
 
 // BRACKET NOTATION
@@ -53,7 +52,6 @@ player["this value"] = 1;       // this method is required for identifiers w/
 /*------------------------------------------------------------------------------
 NESTED OBJECTS
 ------------------------------------------------------------------------------*/
-
 const groceries = {
     foods: {
         food_list: ['bacon', 'eggs', 'potatoes'],
@@ -72,12 +70,40 @@ const groceries = {
     },
 };
 
+/*------------------------------------------------------------------------------
+ITERATING OVER AN OBJECT
+------------------------------------------------------------------------------*/
+const music = {
+    genre: 'rock',
+    volume: 100,
+};
+
+
+// GET THE OBJECT KEYS (FOR-IN)
+for (let key in music) {
+    console.log(key, music[key]);
+}
+
+// GET THE OBJECT KEYS AND VALUES (FOR-OF)
+for (let key of Object.keys(music)) {
+    console.log(key);
+}
+
 
 /*------------------------------------------------------------------------------
-OBJECTS NOTES:
+KEY OBJECTS NOTES:
 --------------------------------------------------------------------------------
 
 - An object is a collection of {key: value} pairs.
+
+- Objects are dynamic (mutable properties).
+
+- Objects are not iterable (can NOT use for-of loops). You must use 
+  'Object.keys' to interate over a converted array of object properties.
+  
+
+- Every object has a 'constructor' method that returns the function that was
+  used to create the object.
 
 - An object value can be most data types and structures.
 

@@ -6,7 +6,9 @@
                   |_|   \__,_|_| |_|\___|\__|_|\___/|_| |_|___/
 --------------------------------------------------------------------------------
 
-                         function <functionName>() {}
+function <functionName>(<parameters>) {<code>} 
+
+<functionName>()
 
 ------------------------------------------------------------------------------*/
 
@@ -19,31 +21,22 @@ greet(); // CALLING THE FUNCTION
 
 
 /*------------------------------------------------------------------------------
-TASK FUNCTION
-    - a function that perfoms a task
+FUNCTION EXAMPLES
 ------------------------------------------------------------------------------*/
 
+// - a function that perfoms a task
 // - parameter is the value given when declaring the function (message).
 function lesson(language, chapter) { 
     console.log('This is for' + language + chapter);
 }
 
-// - argument is the value assigned to the parameter ('Hello!').
-new_greeting('JavaScript', 'functions');
-
-
-/*------------------------------------------------------------------------------
-CALCULATION FUNCTION
-    - a function that returns calculations
-------------------------------------------------------------------------------*/
-
+// calculation function
+// - a function that returns calculations
 function square(number) {
     return number * number; // RETURN
 }
 
-let number = square(2);
-
-console.log(number);
+new_greeting('JavaScript', 'functions');
 
 
 /*------------------------------------------------------------------------------
